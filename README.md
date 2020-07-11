@@ -24,11 +24,10 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false| 
+|name|string|null: false, unique: true| 
 ### Association
-- has_many :user, through: :user_groups
+- has_many :users, through::user_groups
 - has_many :chats
-- has_many :user_groups
 
 ## user_groupsテーブル
 |Column|Type|Options|
