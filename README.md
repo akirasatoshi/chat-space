@@ -7,7 +7,8 @@
 |nickname|string|null: false|
 ### Association
 - has_many :chats
-- has_many :groups
+- has_many :groups, through: :user_groups
+- belongs_to :user_groups
 
 ## chatsテーブル
 |Column|Type|Options|
@@ -23,14 +24,13 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|chat_id|integer|null: false, foreign_key: true|
+|name|string|null: false| 
 ### Association
-- has_many :users
+- has_many :user, through: :user_groups
 - has_many :chats
+- belongs_to :user_groups
 
-## user_groupテーブル
+## user_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
