@@ -39,9 +39,11 @@
         list-style: none;
 
         &__icon{
-          color: #ffffff;
           font-size: 16px;
           margin-left: 5px;
+          a{
+            color: #ffffff;
+          }
         }
 
           
