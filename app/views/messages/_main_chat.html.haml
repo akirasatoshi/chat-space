@@ -1,0 +1,38 @@
+.main_chat
+
+  .main_chat__header
+    .main_chat__header__group
+      .main_chat__header__group__name 
+        test
+      .main_chat__header__group__members__names
+        %ul.main_chat__header__group__members__names__member
+          Member :
+        %li.main_chat__header__group__members__names__nickname 
+          masa
+    = link_to "#", class: "main_chat__header__edit__btn" do
+      Edit
+
+  .message__field
+    .message__field__box
+      .message__field__box__info
+        .message__field__box__info__user__name 
+          masa
+        .message__field__box__info__date 
+          2020/07/17 16:00
+      .message
+        %P.message__content 
+          おはよう
+
+  .form__field
+    %form.Form
+      .Form__contents
+        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
+          %label.Form__inputImage
+            = icon('far', 'image', class: 'Form__icon')
+            %input.Hidden{type: 'file'}
+      %input.Form__submit{type: 'submit', value: 'Send'}    
+      
+
+
+
+

@@ -1,0 +1,24 @@
+.side_bar
+  .side_bar__user-name
+    .side_bar__user-name__txt-box
+      %h3.side_bar__user-name__txt-box__txt 
+        masa
+      %ul.side_bar__user-name__txt-box__icons
+        %li.side_bar__user-name__txt-box__icons__icon
+          = link_to "#", class: "side_bar__user-name__txt-box__icons__icon" do
+            = icon('fas', 'edit')
+        %li.side_bar__user-name__txt-box__icons__icon
+          = link_to "#", class: "side_bar__user-name__txt-box__icons__icon" do
+            = icon('fas', 'cog')
+      
+      
+
+  .side_bar__group__list
+    = link_to '#' do
+      .side_bar__group__list__name
+        グループ名
+      .side_bar__group__list__message
+        メッセージ
+  
+
+     
